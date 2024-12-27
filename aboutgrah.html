@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More About Grahveer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f7f8fa;
+        }
+
+        /* Cover Image */
+        .cover-container {
+            width: 100%;
+            height: 500px;
+            background: url('https://www.shutterstock.com/image-photo/set-construction-tools-house-renovation-260nw-193420553.jpg') no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .cover-container h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            color: white;
+            font-weight: 600;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Video Section */
+        .video-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .video-container iframe {
+            width: 80%;
+            height: 400px;
+            border-radius: 15px;
+        }
+
+        /* Heading */
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Description Section */
+        .about-description {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            line-height: 1.6;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        .about-description h3 {
+            color: #4A90E2;
+            font-weight: 600;
+        }
+
+        /* Service Cards Section */
+        .service-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .service-card {
+            width: 250px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h4 {
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #777;
+            font-size: 1rem;
+        }
+
+        .service-card .learn-more {
+            color: #4A90E2;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        /* Button Hover Effects */
+        .learn-more:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #4A90E2;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Read More Button */
+        .read-more-btn {
+            display: inline-block;
+            background-color: #4A90E2;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-transform: uppercase;
+            font-weight: 500;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .read-more-btn:hover {
+            background-color: #357ABD;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Cover Image Section -->
+    <div class="cover-container">
+        <h1>More About Grahveer</h1>
+    </div>
+
+    <!-- Video Section -->
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/1LELlvMatB4?si=M3kak9O9Ri7uFliq" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <!-- About Description Section -->
+    <section class="about-description">
+        <h2>Welcome to Grahveer</h2>
+        <p>
+            Grahveer is a fresh startup that has quickly gained the trust of its clients through the experience and expertise of our highly skilled team. We specialize in a variety of services that cater to your needs, from gardening to cooking, cleaning, and babysitting. With years of experience in each service, our team is dedicated to providing the highest quality assistance.
+        </p>
+        <h3>Why Grahveer?</h3>
+        <p>
+            We are committed to providing reliable, affordable, and efficient services for our clients. Whether you need a quick gardening service or want to hire a skilled babysitter, Grahveer is the name you can trust. We understand the value of your time and aim to make your life easier by offering a range of services tailored to meet your specific needs.
+        </p>
+    </section>
+
+    <!-- Service Cards Section -->
+    <section class="service-cards">
+        <div class="service-card">
+            <img src="gar.png" alt="Gardening">
+            <h4>Gardening</h4>
+            <p>Professional gardening services for your home or office.</p>
+            
+        </div>
+        <div class="service-card">
+            <img src="plu.png" alt="Plumbing">
+            <h4>Plumbing</h4>
+            <p>Expert plumbing services for all types of repairs and installations.</p>
+            
+        </div>
+        <div class="service-card">
+            <img src="ele.png" alt="Electrical">
+            <h4>Electrical</h4>
+            <p>Electrical installation, repairs, and maintenance.</p>
+            
+        </div>
+        <div class="service-card">
+            <img src="coo.png" alt="Cooking">
+            <h4>Cooking</h4>
+            <p>Delicious home-cooked meals made by expert chefs.</p>
+            
+        </div>
+        <div class="service-card">
+            <img src="cle.png" alt="Cleaning">
+            <h4>Cleaning</h4>
+            <p>Deep cleaning services to keep your space spotless.</p>
+            
+        </div>
+        <div class="service-card">
+            <img src="bab.png" alt="Babysitting">
+            <h4>Babysitting</h4>
+            <p>Caring and trustworthy babysitters for your children.</p>
+            
+        </div>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go to Home Button</title>
+    <style>
+        /* Button Styling */
+        .go-home-button {
+            text-decoration: none; /* Remove underline from the link */
+            display: inline-block;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .go-home-button button {
+            background-color: #4A90E2; /* Green background */
+            color: white; /* White text */
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .go-home-button button:hover {
+            background-color: #45a049; /* Darker green on hover */
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+
+        .go-home-button button:active {
+            transform: scale(1); /* Reset scale on click */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Go to Home Button -->
+    <a href="index.html" class="go-home-button">
+        <button>Go to Home</button>
+    </a>
+
+</body>
+</html>
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 Grahveer. All rights reserved.</p>
+    </footer>
+
+    <!-- Scroll animations -->
+    <script>
+        window.addEventListener('scroll', function () {
+            let serviceCards = document.querySelectorAll('.service-card');
+            serviceCards.forEach(card => {
+                let cardPosition = card.getBoundingClientRect().top;
+                let windowHeight = window.innerHeight;
+
+                if (cardPosition < windowHeight - 100) {
+                    card.classList.add('animate');
+                }
+            });
+        });
+
+        // Add animation class when scroll into view
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.classList.add('animate');
+        });
+    </script>
+    
+</body>
+
+</html>

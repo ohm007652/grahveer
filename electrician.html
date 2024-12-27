@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electrician Services</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Add your CSS file link -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #4A90E2, #F1F1F1);
+      color: #333;
+    }
+
+    .container {
+      width: 90%;
+      margin: auto;
+      padding: 20px;
+      max-width: 1200px;
+    }
+
+    .service-header {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .service-header h1 {
+      font-size: 3rem;
+      color: #fff;
+      animation: slideIn 2s ease;
+    }
+
+    .service-header p {
+      font-size: 1.2rem;
+      color: #eee;
+      margin-top: 10px;
+    }
+
+    .service-icons {
+      display: flex;
+      justify-content: space-around;
+      margin: 50px 0;
+      flex-wrap: wrap;
+    }
+
+    .icon-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      margin: 10px;
+      flex: 1 1 250px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .icon-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .icon-card img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 20px;
+    }
+
+    .icon-card h3 {
+      font-size: 1.5rem;
+      margin: 10px 0;
+    }
+
+    .icon-card p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .service-description {
+      margin-top: 50px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 2s ease;
+    }
+
+    .service-description img {
+      float: right;
+      width: 300px;
+      height: auto;
+      margin-left: 20px;
+      border-radius: 15px;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background: #4A90E2;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #357ABD;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="service-header">
+      <h1>Electrician Services</h1>
+      <p>We power up your world with expert electrical solutions!</p>
+    </header>
+
+    <section class="service-icons">
+      <div class="icon-card">
+       
+        <h3>Lighting Installation</h3>
+        <p>Expert installation of indoor and outdoor lighting systems.</p>
+      </div>
+      <div class="icon-card">
+        
+        <h3>Wiring Repairs</h3>
+        <p>Fixing faulty wiring to ensure safety and efficiency.</p>
+      </div>
+      <div class="icon-card">
+       
+        <h3>Switchboard Upgrades</h3>
+        <p>Upgrade old switchboards for modern power needs.</p>
+      </div>
+    </section>
+
+    <section class="service-description">
+      <h2>Why Choose Us?</h2>
+      <p>
+        Our team of certified electricians is equipped to handle all your electrical needs, whether at home or work. We prioritize safety, efficiency, and customer satisfaction. From installations to repairs, we've got you covered.
+      </p>
+      <p>
+        Call us today to ensure your electrical systems are in the best hands. Experience prompt service and lasting solutions.
+      </p>
+    
+      <a href="booking.html" class="btn">Book Electrician</a>
+    </section>
+  </div>
+</body>
+</html>

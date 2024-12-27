@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Signup and Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 400px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .toggle-btns {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .toggle-btns button {
+            padding: 10px 20px;
+            border: none;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .toggle-btns button.active {
+            background: #0056b3;
+        }
+        form {
+            display: none;
+        }
+        form.active {
+            display: block;
+        }
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        textarea {
+            resize: none;
+        }
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Employee Portal</h2>
+        <div class="toggle-btns">
+            <button id="login-btn" class="active">Login</button>
+            <button id="signup-btn">Signup</button>
+        </div>
+
+        <!-- Login Form -->
+        <form id="login-form" class="active" method="POST" action="emplogin.php">
+            <label for="login-name">Name</label>
+            <input type="text" id="login-name" name="name" required>
+            
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" name="email" required>
+            
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" name="password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- Signup Form -->
+        <form id="signup-form" method="POST" action="empsignup.php">
+            <label for="signup-name">Name</label>
+            <input type="text" id="signup-name" name="name" required>
+            
+            <label for="signup-age">Age</label>
+            <input type="number" id="signup-age" name="age" min="18" max="65" required>
+            
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" name="email" required>
+            
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" name="password" required>
+            
+            <label for="signup-dob">Date of Birth</label>
+            <input type="date" id="signup-dob" name="dob" required>
+            
+            <label for="signup-profession">Profession</label>
+            <select id="signup-profession" name="profession" required>
+                <option value="Electrician">Electrician</option>
+                <option value="Plumber">Plumber</option>
+                <option value="Gardener">Gardener</option>
+                <option value="Chef">Chef</option>
+                <option value="Cleaning">Cleaning</option>
+                <option value="Caretaker">Caretaker</option>
+            </select>
+            
+            <label for="signup-id-card">ID Card Type</label>
+            <select id="signup-id-card" name="id_card_type" required>
+                <option value="Aadhar">Aadhar</option>
+                <option value="Voter ID">Voter ID</option>
+                <option value="License">License</option>
+            </select>
+            
+            <label for="signup-experience">Experience</label>
+            <textarea id="signup-experience" name="experience" rows="4" placeholder="Describe your work experience..." required></textarea>
+            
+            <button type="submit">Signup</button>
+        </form>
+    </div>
+
+    <script>
+        const loginBtn = document.getElementById('login-btn');
+        const signupBtn = document.getElementById('signup-btn');
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+
+        loginBtn.addEventListener('click', () => {
+            loginForm.classList.add('active');
+            signupForm.classList.remove('active');
+            loginBtn.classList.add('active');
+            signupBtn.classList.remove('active');
+        });
+
+        signupBtn.addEventListener('click', () => {
+            signupForm.classList.add('active');
+            loginForm.classList.remove('active');
+            signupBtn.classList.add('active');
+            loginBtn.classList.remove('active');
+        });
+    </script>
+</body>
+</html>

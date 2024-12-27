@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Booking</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 70%;
+            margin: 50px auto;
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            text-align: center;
+            color: #4A90E2;
+            margin-bottom: 30px;
+        }
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+        label {
+            color: #333;
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .full-width {
+            grid-column: span 2;
+        }
+        .cost-display {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .cost-display h3 {
+            color: #4A90E2;
+            font-size: 24px;
+        }
+        .submit-btn {
+            background-color: #4A90E2;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #357ABD;
+        }
+    </style>
+    <button onclick="history.back()">Back</button>
+</head>
+<body>
+
+<div class="container">
+    <h2>Book a Service</h2>
+    <form action="booking.php" method="POST">
+        <div>
+            <label for="service">Select Service:</label>
+            <select id="service" name="service" required>
+                <option value="">Choose a Service</option>
+                <option value="gardener">Gardening - ₹100</option>
+                <option value="plumber">Plumber - ₹150</option>
+                <option value="electrician">Electrical - ₹200</option>
+                <option value="chef">Cooking - ₹120</option>
+                <option value="cleaning">Cleaning - ₹80</option>
+                <option value="caretaker">Babysitting - ₹180</option>
+            </select>
+        </div>
+        <div>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        </div>
+        <div class="full-width">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" placeholder="Enter your address" rows="4" required></textarea>
+        </div>
+        <div class="full-width">
+            <label for="description">Describe Your Need:</label>
+            <textarea id="description" name="description" placeholder="Describe your specific requirements" rows="4" required></textarea>
+        </div>
+        <div class="full-width cost-display">
+            <h3>Total Cost: $<span id="totalCost">0</span></h3>
+        </div>
+        <div class="full-width">
+            <button type="submit" class="submit-btn">Book Now</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    const serviceSelect = document.getElementById('service');
+    const totalCostDisplay = document.getElementById('totalCost');
+
+    // Update total cost when a service is selected
+    serviceSelect.addEventListener('change', function() {
+        const selectedServiceCost = {
+            'gardener': 100,
+            'plumber': 150,
+            'electrician': 200,
+            'chef': 120,
+            'cleaning': 80,
+            'caretaker': 180
+        };
+        totalCostDisplay.textContent = selectedServiceCost[serviceSelect.value] || 0;
+    });
+</script>
+
+</body>
+</html>
